@@ -1,4 +1,26 @@
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob-all')
+const path = require('path')
+
+const plugins = []
+
+if (process.env.NODE_ENV === 'production') {
+  plugins.push(
+    new PurgecssPlugin({
+      paths: glob.sync([
+        path.join(__dirname, './public/index.html'),
+        path.join(__dirname, './src/**/*.vue'),
+        path.join(__dirname, './src/**/*.js')
+      ])
+    })
+  )
+}
+
 module.exports = {
+  configureWebpack: {
+    // Merged into the final Webpack config
+    plugins
+  },
   css: {
     loaderOptions: {
       // by default the `sass` option will apply to both syntaxes
