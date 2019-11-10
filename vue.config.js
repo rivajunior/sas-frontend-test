@@ -1,8 +1,9 @@
+const StylelintPlugin = require('stylelint-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob-all')
 const path = require('path')
 
-const plugins = []
+const plugins = [new StylelintPlugin()]
 
 if (process.env.NODE_ENV === 'production') {
   plugins.push(

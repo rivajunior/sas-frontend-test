@@ -1,8 +1,8 @@
 <template>
   <div class="category-item">
-    <router-link :to="`/category/${id}/exame`" class="category-name stretched-link">{{
-      name
-    }}</router-link>
+    <router-link :to="`/category/${id}/exame`" class="category-name stretched-link">
+      {{ name }}
+    </router-link>
   </div>
 </template>
 
@@ -40,8 +40,8 @@ export default {
 
 .category-name {
   font-size: 1.125rem;
-  font-weight: bold;
-  text-decoration: none;
+  font-weight: $font-weight-bold;
   color: $body-color;
+  text-decoration: none;
 }
 </style>
