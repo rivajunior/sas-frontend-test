@@ -5,12 +5,16 @@ $dark: $dark-blue !default;
 $gray-600: #53595f !default;
 $gray-100: #efeff2 !default;
 $gray-900: #1e2124 !default;
+$red: #ff6660;
+$body-bg: #e5e5e5;
 
-// Shadows
+// Components
+//
+// Define common padding and border radius sizes and more.
+$border-radius-sm: 0.3rem;
+$border-radius: 0.4rem;
+$border-radius-lg: 0.5rem;
 $box-shadow-sm: 0 1px 4px rgba(#343c58, 0.4) !default;
-
-// Buttons
-$btn-border-width: 0 !default;
 
 // Typography
 // stylelint-disable value-keyword-case
@@ -18,3 +22,6 @@ $font-family-sans-serif: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 // stylelint-enable value-keyword-case
+
+// Buttons
+$btn-border-width: 0 !default;

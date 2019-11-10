@@ -32,6 +32,7 @@ export default {
   border-radius: $border-radius-lg;
   box-shadow: $box-shadow-sm;
   transition: box-shadow 0.3s ease-out;
+  background-color: $white;
 
   &:hover {
     box-shadow: $box-shadow;

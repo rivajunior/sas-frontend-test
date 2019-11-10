@@ -1,5 +1,5 @@
 <template>
-  <div class="categories">
+  <div class="categories py-5">
     <SectionTitle tag="h1">Categorias</SectionTitle>
     <b-row>
       <b-col

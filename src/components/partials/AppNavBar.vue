@@ -1,6 +1,6 @@
 <template>
   <b-navbar type="dark" variant="dark">
-    <b-navbar-brand href="#">{{ appName }}</b-navbar-brand>
+    <b-navbar-brand to="/">{{ appName }}</b-navbar-brand>
   </b-navbar>
 </template>
 

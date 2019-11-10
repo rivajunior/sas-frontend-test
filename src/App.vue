@@ -1,6 +1,7 @@
 <template>
   <component :is="layout" id="app">
     <router-view />
+    <vue-progress-bar />
   </component>
 </template>
 
@@ -17,6 +18,10 @@ export default {
     layout() {
       return `${this.$route.meta.layout || DEFAULT_LAYOUT}Layout`
     }
+  },
+
+  created() {
+    this.$store.dispatch('loadCategories')
   }
 }
 </script>

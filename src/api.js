@@ -21,4 +21,5 @@ if (localStorage.getItem(TOKEN_KEY) === null) {
 } else {
   axios.defaults.headers.common.Authorization = localStorage.getItem(TOKEN_KEY)
 }
+
 export default api

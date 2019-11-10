@@ -2,7 +2,7 @@
   <div>
     <AppNavBar />
 
-    <b-container class="py-5">
+    <b-container>
       <slot></slot>
     </b-container>
   </div>
