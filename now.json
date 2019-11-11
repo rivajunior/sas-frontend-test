@@ -1,7 +1,5 @@
 {
-    "build": {
-      "env": {
+    "env": {
         "VUE_APP_NAME": "@vue-app-name"
-      }
     }
-  }
+}
