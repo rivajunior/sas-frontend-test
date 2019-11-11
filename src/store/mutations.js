@@ -15,5 +15,10 @@ export default {
 
   [mutationsTypes.STOP_LOADING](state) {
     state.loading = false
+  },
+
+  [mutationsTypes.SET_API_TOKEN](state, { token }) {
+    state.token = token
+    localStorage.setItem(state.tokenKeyName, token)
   }
 }
