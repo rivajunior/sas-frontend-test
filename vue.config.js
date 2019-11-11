@@ -1,21 +1,21 @@
 const StylelintPlugin = require('stylelint-webpack-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
-const glob = require('glob-all')
-const path = require('path')
+// const PurgecssPlugin = require('purgecss-webpack-plugin')
+// const glob = require('glob-all')
+// const path = require('path')
 
 const plugins = [new StylelintPlugin()]
 
-if (process.env.NODE_ENV === 'production') {
-  plugins.push(
-    new PurgecssPlugin({
-      paths: glob.sync([
-        path.join(__dirname, './public/index.html'),
-        path.join(__dirname, './src/**/*.vue'),
-        path.join(__dirname, './src/**/*.js')
-      ])
-    })
-  )
-}
+// if (process.env.NODE_ENV === 'production') {
+//   plugins.push(
+//     new PurgecssPlugin({
+//       paths: glob.sync([
+//         path.join(__dirname, 'public/index.html'),
+//         path.join(__dirname, 'src/**/*.vue'),
+//         path.join(__dirname, 'src/**/*.js')
+//       ])
+//     })
+//   )
+// }
 
 module.exports = {
   configureWebpack: {
