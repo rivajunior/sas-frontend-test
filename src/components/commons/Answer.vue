@@ -1,7 +1,13 @@
 <template>
-  <b-card role="button" class="answer" @click="$emit('click', answer)">
+  <b-card
+    role="radio"
+    :aria-checked="active"
+    :tabindex="0"
+    :class="{ answer: true, active: active }"
+    @click="$emit('input', value)"
+  >
     <b-card-text>
-      {{ answer }}
+      {{ value }}
     </b-card-text>
   </b-card>
 </template>
@@ -9,10 +15,11 @@
 <script>
 export default {
   props: {
-    answer: {
+    value: {
       type: String,
       required: true
-    }
+    },
+    active: Boolean
   }
 }
 </script>
@@ -20,11 +27,20 @@ export default {
 <style lang="scss" scoped>
 .answer {
   box-shadow: $box-shadow-sm;
+  border: 2px solid transparent;
   cursor: pointer;
-  // border-radius: ;
+
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+  }
 
   &:hover {
-    box-shadow: $box-shadow;
+    will-change: border-color;
+  }
+
+  &.active {
+    border-color: $primary;
   }
 }
 </style>

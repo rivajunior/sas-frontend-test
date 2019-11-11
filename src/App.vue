@@ -67,7 +67,15 @@ export default {
 .btn {
   &.disabled,
   &:disabled {
-    background-color: #c9cccf;
+    background-color: $btn-disable-bg;
+    color: color-yiq($btn-disable-bg);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .modal-#{$color} {
+    border: 2px solid $value;
+    border-radius: $modal-content-border-radius;
   }
 }
 </style>
