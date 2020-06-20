@@ -12,6 +12,6 @@
 import AppNavBar from '@/components/partials/AppNavBar.vue'
 
 export default {
-  components: { AppNavBar }
+  components: { AppNavBar },
 }
 </script>

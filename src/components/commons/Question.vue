@@ -92,7 +92,7 @@ import Answer from './Answer.vue'
 const DIFFICULTIES_NAMES = {
   easy: 'Fácil',
   medium: 'Média',
-  hard: 'Difícil'
+  hard: 'Difícil',
 }
 
 export default {
@@ -100,37 +100,37 @@ export default {
   props: {
     incorrectAnswers: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     correctAnswer: {
       type: String,
-      default: ''
+      default: '',
     },
     difficulty: {
       type: String,
-      default: ''
+      default: '',
     },
     question: {
       type: String,
-      default: ''
+      default: '',
     },
     category: {
       type: String,
-      default: ''
+      default: '',
     },
     type: {
       type: String,
-      default: ''
+      default: '',
     },
     questionNumber: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 
   data: () => ({
     answered: false,
-    answer: null
+    answer: null,
   }),
 
   computed: {
@@ -164,13 +164,13 @@ export default {
     classes() {
       return {
         question: true,
-        'question-success': this.chooseRightAnswer
+        'question-success': this.chooseRightAnswer,
       }
     },
 
     isRight() {
       return this.answer === this.correctAnswer
-    }
+    },
   },
 
   methods: {
@@ -186,8 +186,8 @@ export default {
       this.answered = true
 
       this.$emit('answered', this.isRight)
-    }
-  }
+    },
+  },
 }
 </script>
 

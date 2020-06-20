@@ -3,12 +3,12 @@ import api from '../api'
 
 export default {
   requestToken({ commit }) {
-    return api.get('api_token.php?command=request').then(response => {
+    return api.get('api_token.php?command=request').then((response) => {
       const { token } = response.data
 
       commit({
         type: mutationsTypes.SET_API_TOKEN,
-        token
+        token,
       })
     })
   },
@@ -18,12 +18,12 @@ export default {
 
     return api
       .get('api_category.php')
-      .then(response => {
+      .then((response) => {
         const categories = response.data.trivia_categories
 
         commit({
           type: mutationsTypes.SET_CATEGORIES,
-          categories
+          categories,
         })
       })
       .finally(() => {
@@ -38,16 +38,16 @@ export default {
       .get(
         `api.php?amount=${amount}&category=${categoryId}&type=${type}&difficulty=${difficult}&encode=base64&token=${state.token}`
       )
-      .then(response => {
+      .then((response) => {
         const questions = response.data.results
 
         commit({
           type: mutationsTypes.SET_QUESTIONS,
-          questions
+          questions,
         })
       })
       .finally(() => {
         commit(mutationsTypes.STOP_LOADING)
       })
-  }
+  },
 }

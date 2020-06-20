@@ -7,7 +7,7 @@
 <script>
 export default {
   data: () => ({
-    appName: process.env.VUE_APP_NAME
-  })
+    appName: process.env.VUE_APP_NAME,
+  }),
 }
 </script>

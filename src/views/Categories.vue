@@ -23,9 +23,9 @@ import CategoryItem from '@/components/commons/CategoryItem.vue'
 export default {
   name: 'Categories',
   components: {
-    CategoryItem
+    CategoryItem,
   },
-  computed: mapState(['categories'])
+  computed: mapState(['categories']),
 }
 </script>
 

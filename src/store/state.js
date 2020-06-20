@@ -5,5 +5,5 @@ export default {
   categories: [],
   questions: [],
   difficulties: ['easy', 'medium', 'hard'],
-  currentDifficulty: 'medium'
+  currentDifficulty: 'medium',
 }

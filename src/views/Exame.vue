@@ -24,8 +24,8 @@ export default {
     sameLevelConsecutiveHit: 0,
     changeDifficultyOnConsecutive: {
       fails: 2,
-      hits: 2
-    }
+      hits: 2,
+    },
   }),
 
   computed: {
@@ -45,17 +45,17 @@ export default {
         difficulty: question.difficulty,
         question: question.question,
         category: question.category,
-        type: question.type
+        type: question.type,
       }
     },
 
     fails() {
-      return this.questions.filter(question => question.user_answer === question.correct_answer)
+      return this.questions.filter((question) => question.user_answer === question.correct_answer)
     },
 
     hits() {
-      return this.questions.filter(question => question.user_answer !== question.correct_answer)
-    }
+      return this.questions.filter((question) => question.user_answer !== question.correct_answer)
+    },
   },
 
   watch: {
@@ -72,7 +72,7 @@ export default {
     },
 
     $route: 'fetchData',
-    categories: 'fetchData'
+    categories: 'fetchData',
   },
 
   created() {
@@ -80,10 +80,10 @@ export default {
       this.fetchData()
     }
 
-    this.difficulties.forEach(difficulty => {
+    this.difficulties.forEach((difficulty) => {
       this.resultsPerLevel[difficulty] = {
         hits: 0,
-        miss: 0
+        miss: 0,
       }
     })
   },
@@ -133,7 +133,7 @@ export default {
       if (currentDifficultyIndex < this.difficulties.length - 1) {
         this.currentDifficulty = this.difficulties[currentDifficultyIndex + 1]
       }
-    }
-  }
+    },
+  },
 }
 </script>

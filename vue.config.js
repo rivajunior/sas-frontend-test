@@ -20,7 +20,7 @@ const plugins = [new StylelintPlugin()]
 module.exports = {
   configureWebpack: {
     // Merged into the final Webpack config
-    plugins
+    plugins,
   },
   css: {
     loaderOptions: {
@@ -35,8 +35,8 @@ module.exports = {
             @import '~bootstrap/scss/functions';
             @import '~bootstrap/scss/variables';
             @import '~bootstrap/scss/mixins';
-        `
-      }
-    }
-  }
+        `,
+      },
+    },
+  },
 }

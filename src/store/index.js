@@ -15,5 +15,5 @@ export default new Vuex.Store({
   actions,
   getters,
   modules: {},
-  strict: debug
+  strict: debug,
 })

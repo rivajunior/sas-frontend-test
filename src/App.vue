@@ -13,16 +13,14 @@ const DEFAULT_LAYOUT = 'Default'
 export default {
   name: 'App',
   components: { DefaultLayout },
-
   computed: {
     layout() {
       return `${this.$route.meta.layout || DEFAULT_LAYOUT}Layout`
-    }
+    },
   },
-
   created() {
     this.$store.dispatch('loadCategories')
-  }
+  },
 }
 </script>
 

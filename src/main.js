@@ -6,13 +6,12 @@ import { faTimesCircle, faStar as farStar } from '@fortawesome/free-regular-svg-
 import { faStar, faCheckCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+import SectionTitle from '@/components/commons/SectionTitle.vue'
 import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import mutationsTypes from './store/mutationsTypes'
-
-import SectionTitle from '@/components/commons/SectionTitle.vue'
 
 Vue.config.productionTip = false
 
@@ -22,7 +21,7 @@ Vue.use(BootstrapVue)
 Vue.use(VueProgressBar, {
   color: '#0467db',
   failedColor: '#ff6660',
-  height: '2px'
+  height: '2px',
 })
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -39,7 +38,7 @@ new Vue({
     } else {
       this.$store.commit({
         type: mutationsTypes.SET_API_TOKEN,
-        token
+        token,
       })
     }
 
@@ -59,5 +58,5 @@ new Vue({
       this.$Progress.finish()
     })
   },
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount('#app')
